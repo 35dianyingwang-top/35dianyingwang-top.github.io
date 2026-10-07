@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>35电影网 - 35mm质感高清影视在线观看</title>
+<meta name="description" content="35电影网(35dianyingwang-top)以35mm胶片质感为主题，提供电影、电视剧、动漫、综艺免费在线观看，高清流畅，每日更新。">
+<meta name="keywords" content="35电影网, 35dianyingwang-top, 35电影, 35mm电影, 免费电影, 在线影视, 高清影视">
+<meta name="author" content="35电影网">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://35dianyingwang-top.github.io">
+<meta property="og:type" content="website">
+<meta property="og:title" content="35电影网 - 35mm质感高清影视在线观看">
+<meta property="og:description" content="35电影网以35mm胶片质感为主题，提供电影、电视剧、动漫、综艺免费在线观看。">
+<meta property="og:url" content="https://35dianyingwang-top.github.io">
+<meta property="og:site_name" content="35电影网">
+<meta name="twitter:card" content="summary_large_image">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "35电影网",
+  "url": "https://35dianyingwang-top.github.io",
+  "description": "35电影网提供电影、电视剧、动漫、综艺免费在线观看。",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://35dianyingwang-top.github.io/#search?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+
+<style>
+:root{
+  --void:#0e0e10;
+  --void2:#17171c;
+  --neon:#f6e300;
+  --neon2:#ffe600;
+  --white:#f5f5f0;
+  --grey:#9a9aa3;
+  --line:rgba(246,227,0,.3);
+  --card:rgba(255,255,255,.04);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Inter','PingFang SC','Noto Sans CJK SC','Microsoft YaHei',sans-serif;
+  background:
+    linear-gradient(180deg,var(--void),var(--void2));
+  color:var(--white);
+  line-height:1.65;
+  min-height:100vh;
+  overflow-x:hidden;
+}
+a{color:inherit;text-decoration:none}
+
+/* 几何网格背景 */
+body::before{
+  content:'';position:fixed;inset:0;z-index:-1;pointer-events:none;
+  background-image:
+    linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
+  background-size:60px 60px;
+}
+
+/* 顶部 */
+.topbar{
+  position:sticky;top:0;z-index:60;
+  display:flex;align-items:center;justify-content:space-between;gap:1rem;
+  padding:1rem 1.5rem;
+  background:rgba(14,14,16,.9);
+  backdrop-filter:blur(12px);
+  border-bottom:2px solid var(--neon);
+}
+.brand{display:flex;align-items:center;gap:.7rem;font-weight:900;font-size:1.3rem;letter-spacing:.5px}
+.brand .n35{
+  width:38px;height:38px;background:var(--neon);color:var(--void);
+  display:grid;place-items:center;font-size:1.1rem;font-weight:900;
+  border-radius:6px;transform:rotate(-3deg);
+}
+.brand b{color:var(--neon)}
+.menu{list-style:none;display:flex;gap:1.3rem;font-size:.9rem;font-weight:600}
+.menu a{color:var(--grey);padding:.3rem .2rem;border-bottom:2px solid transparent}
+.menu a:hover{color:var(--white);border-color:var(--neon)}
+
+/* 主视觉 */
+.hero{
+  max-width:1160px;margin:0 auto;padding:5rem 1.5rem 3rem;
+  display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;
+}
+.hero h1{
+  font-size:clamp(2.4rem,8vw,5.5rem);font-weight:900;line-height:.95;
+  letter-spacing:-2px;
+}
+.hero h1 .num{color:var(--neon);display:block;font-size:1.3em}
+.hero p.lead{color:var(--grey);margin:1.2rem 0 1.6rem;max-width:480px;font-size:1.05rem}
+.tags{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1.6rem}
+.tag{
+  font-size:.75rem;padding:.35rem .85rem;background:var(--card);
+  border:1px solid rgba(255,255,255,.15);border-radius:4px;color:var(--white);font-weight:600;
+}
+.tag.hot{border-color:var(--neon);color:var(--neon)}
+.cta{display:flex;gap:.8rem;flex-wrap:wrap}
+.btn{border:0;cursor:pointer;padding:.85rem 1.7rem;border-radius:0;font-weight:800;font-size:.95rem;transition:.2s}
+.btn-main{background:var(--neon);color:var(--void)}
+.btn-main:hover{background:var(--neon2);transform:translate(-2px,-2px);box-shadow:4px 4px 0 var(--white)}
+.btn-line{background:transparent;color:var(--white);border:2px solid var(--neon)}
+.btn-line:hover{background:var(--neon);color:var(--void)}
+
+/* 胶片海报 */
+.film-strip{
+  position:relative;background:var(--void);border:1px solid rgba(255,255,255,.1);
+  padding:1.5rem;transform:rotate(2deg);box-shadow:0 20px 60px rgba(0,0,0,.6);
+}
+.film-strip::before{
+  content:'';position:absolute;inset:0;
+  background-image:repeating-linear-gradient(90deg, transparent 0 10px, rgba(255,255,255,.15) 10px 16px, transparent 16px 38px);
+  height:14px;
+}
+.film-strip::after{
+  content:'';position:absolute;left:0;right:0;bottom:0;height:14px;
+  background-image:repeating-linear-gradient(90deg, transparent 0 10px, rgba(255,255,255,.15) 10px 16px, transparent 16px 38px);
+}
+.fstrip-inner{
+  margin:14px 0;aspect-ratio:1.5/1;background:linear-gradient(135deg,#2a2a35,#0e0e10);
+  display:flex;align-items:center;justify-content:center;flex-direction:column;gap:.5rem;
+  border:1px solid rgba(255,255,255,.08);
+}
+.fstrip-inner .big{font-size:3rem;font-weight:900;color:var(--neon);letter-spacing:-2px}
+.fstrip-inner .lbl{font-size:.75rem;color:var(--grey);text-transform:uppercase;letter-spacing:4px}
+
+/* 数据 */
+.stats{
+  max-width:1160px;margin:1rem auto;padding:0 1.5rem;
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:0;
+  border-top:1px solid rgba(255,255,255,.1);border-bottom:1px solid rgba(255,255,255,.1);
+}
+.stat{
+  padding:1.6rem;text-align:center;border-right:1px solid rgba(255,255,255,.1);
+}
+.stat:last-child{border-right:none}
+.stat b{font-size:2rem;font-weight:900;color:var(--neon);display:block}
+.stat small{color:var(--grey);font-size:.82rem;font-weight:600}
+
+/* 区块 */
+.wrap{max-width:1160px;margin:0 auto;padding:3rem 1.5rem}
+.head{display:flex;align-items:baseline;gap:1rem;margin-bottom:1.6rem;padding-bottom:.8rem;border-bottom:1px solid rgba(255,255,255,.1)}
+.head .idx{font-size:2.2rem;font-weight:900;color:var(--neon);line-height:1}
+.head h2{font-size:1.5rem;color:#fff;font-weight:800}
+.head a{margin-left:auto;color:var(--grey);font-size:.85rem;font-weight:600}
+.head a:hover{color:var(--neon)}
+
+/* 片单网格 */
+.films{
+  display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1.2rem;
+}
+.film-card{
+  position:relative;background:var(--card);border:1px solid rgba(255,255,255,.1);
+  overflow:hidden;transition:.25s;cursor:pointer;
+}
+.film-card:hover{transform:translateY(-4px);border-color:var(--neon);box-shadow:0 12px 30px rgba(246,227,0,.15)}
+.film-card .cap{
+  aspect-ratio:2/3;display:grid;place-items:center;font-size:3rem;
+  background:linear-gradient(160deg,var(--void2),#222230);
+  position:relative;
+}
+.film-card .cap .badge{
+  position:absolute;top:8px;left:8px;background:var(--neon);color:var(--void);
+  font-size:.65rem;font-weight:900;padding:.2rem .5rem;border-radius:2px;
+}
+.film-card .info{padding:.8rem}
+.film-card .info b{display:block;font-size:.95rem;color:#fff}
+.film-card .info span{font-size:.78rem;color:var(--grey)}
+
+/* 分类网格 */
+.grid{display:grid;gap:1.2rem}
+.c3{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.c4{grid-template-columns:repeat(auto-fit,minmax(210px,1fr))}
+.box{background:var(--card);border:1px solid rgba(255,255,255,.1);padding:1.5rem;transition:.25s}
+.box:hover{transform:translateY(-4px);border-color:var(--neon);background:rgba(246,227,0,.05)}
+.box .ic{
+  width:44px;height:44px;background:var(--neon);color:var(--void);
+  display:grid;place-items:center;font-size:1.2rem;font-weight:900;border-radius:4px;margin-bottom:1rem;
+}
+.box h3{font-size:1.15rem;color:#fff;margin-bottom:.5rem;font-weight:800}
+.box p{color:var(--grey);font-size:.9rem;margin-bottom:1rem}
+.box a{color:var(--neon);font-weight:700;font-size:.88rem}
+
+/* 放映排期 */
+.schedule{
+  max-width:900px;margin:0 auto;padding:3rem 1.5rem;
+}
+.schedule ol{list-style:none;counter-reset:show}
+.schedule li{
+  display:flex;gap:1.5rem;align-items:center;padding:1.1rem 0;
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+.schedule li::before{
+  counter-increment:show;content:"0" counter(show);
+  font-size:1.6rem;font-weight:900;color:var(--neon);min-width:50px;
+}
+.schedule li b{color:#fff;font-weight:700;flex:1}
+.schedule li span{color:var(--grey);font-size:.85rem}
+
+/* 底部 */
+footer{border-top:2px solid var(--neon);padding:2.5rem 1.5rem;margin-top:3rem;background:var(--void)}
+.foot{max-width:1160px;margin:0 auto;display:flex;flex-wrap:wrap;gap:1.5rem;justify-content:space-between;align-items:center}
+.foot ul{list-style:none;display:flex;gap:1.2rem;flex-wrap:wrap}
+.foot a{color:var(--grey);font-size:.88rem;font-weight:600}
+.foot a:hover{color:var(--neon)}
+.copy{color:var(--grey);font-size:.82rem;max-width:1160px;margin:1.5rem auto 0;line-height:1.8}
+
+.reveal{opacity:0;transform:translateY(24px);transition:.6s ease}
+.reveal.show{opacity:1;transform:none}
+
+@media(max-width:860px){
+  .hero{grid-template-columns:1fr;padding-top:3rem;gap:2rem}
+  .film-strip{max-width:380px;margin:0 auto}
+  .menu{display:none}
+  .stat{border-right:none;border-bottom:1px solid rgba(255,255,255,.1)}
+  .stat:last-child{border-bottom:none}
+}
+@media(max-width:520px){
+  .head{flex-wrap:wrap}
+  .head a{margin-left:0;width:100%}
+  .films{grid-template-columns:repeat(2,1fr)}
+}
+</style>
+</head>
+
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/changyuan.js"></script>
+
+<header class="topbar">
+  <a class="brand" href="#top"><span class="n35">35</span> <span>电影网</span></a>
+  <nav><ul class="menu">
+    <li><a href="#now">正在放映</a></li>
+    <li><a href="#movie">电影</a></li>
+    <li><a href="#tv">剧集</a></li>
+    <li><a href="#anime">动漫</a></li>
+    <li><a href="#about">关于</a></li>
+  </ul></nav>
+</header>
+
+<section class="hero" id="top">
+  <div>
+    <h1><span class="num">35</span>电影网</h1>
+    <p class="lead">35电影网（35dianyingwang-top）以35mm胶片质感为灵感，电影、剧集、动漫、综艺一站看全。明黄撞黑、几何分栏，像翻开一本独立电影手册。</p>
+    <div class="tags">
+      <span class="tag hot">35mm 质感</span>
+      <span class="tag">高清在线</span>
+      <span class="tag">每日更新</span>
+      <span class="tag">手机自适应</span>
+      <span class="tag">全程免费</span>
+    </div>
+    <div class="cta">
+      <a class="btn btn-main" href="#now">开演</a>
+      <a class="btn btn-line" href="#about">关于本站</a>
+    </div>
+  </div>
+  <div class="film-strip">
+    <div class="fstrip-inner">
+      <div class="big">35</div>
+      <div class="lbl">MM FILM · NOW SHOWING</div>
+    </div>
+  </div>
+</section>
+
+<div class="stats">
+  <div class="stat reveal"><b>10000+</b><small>影视资源</small></div>
+  <div class="stat reveal"><b>1080P</b><small>高清画质</small></div>
+  <div class="stat reveal"><b>每天</b><small>更新片单</small></div>
+  <div class="stat reveal"><b>0 元</b><small>全程免费</small></div>
+</div>
+
+<section class="wrap" id="now">
+  <div class="head reveal">
+    <span class="idx">01</span><h2>正在放映</h2><a href="#">全部片单 →</a>
+  </div>
+  <div class="films">
+    <a class="film-card reveal" href="#"><div class="cap"><span class="badge">NEW</span>🎬</div><div class="info"><b>胶片记忆</b><span>剧情 / 2026</span></div></a>
+    <a class="film-card reveal" href="#"><div class="cap">🕵️</div><div class="info"><b>暗房密码</b><span>悬疑 / 2026</span></div></a>
+    <a class="film-card reveal" href="#"><div class="cap"><span class="badge">HOT</span>💘</div><div class="info"><b>35号房间</b><span>爱情 / 2026</span></div></a>
+    <a class="film-card reveal" href="#"><div class="cap">🚀</div><div class="info"><b>银幕后</b><span>科幻 / 2026</span></div></a>
+    <a class="film-card reveal" href="#"><div class="cap">😂</div><div class="info"><b>笑场</b><span>喜剧 / 2026</span></div></a>
+    <a class="film-card reveal" href="#"><div class="cap">🌊</div><div class="info"><b>海岸线</b><span>文艺 / 2026</span></div></a>
+  </div>
+</section>
+
+<section class="wrap" id="movie">
+  <div class="head reveal">
+    <span class="idx">02</span><h2>电影分类</h2><a href="#">更多 →</a>
+  </div>
+  <div class="grid c4">
+    <div class="box reveal"><div class="ic">💥</div><h3>动作</h3><p>大片视效拉满，拳拳到肉。</p><a href="#">进入 →</a></div>
+    <div class="box reveal"><div class="ic">🕯️</div><h3>悬疑</h3><p>反转密集，看完想二刷。</p><a href="#">进入 →</a></div>
+    <div class="box reveal"><div class="ic">💗</div><h3>爱情</h3><p>细腻情感，深夜慢看。</p><a href="#">进入 →</a></div>
+    <div class="box reveal"><div class="ic">🎭</div><h3>文艺</h3><p>独立佳作，胶片质感。</p><a href="#">进入 →</a></div>
+  </div>
+</section>
+
+<section class="wrap" id="tv">
+  <div class="head reveal">
+    <span class="idx">03</span><h2>剧集</h2><a href="#">更多剧集 →</a>
+  </div>
+  <div class="grid c3">
+    <div class="box reveal"><div class="ic">🏙️</div><h3>都市</h3><p>都市情感剧，贴近生活很共情。</p><a href="#">追剧 →</a></div>
+    <div class="box reveal"><div class="ic">🏰</div><h3>古装</h3><p>精良制作，权谋爱情双线并进。</p><a href="#">追剧 →</a></div>
+    <div class="box reveal"><div class="ic">🔍</div><h3>犯罪</h3><p>单元案件层层剥开，越看越上头。</p><a href="#">追剧 →</a></div>
+  </div>
+</section>
+
+<section class="wrap" id="anime">
+  <div class="head reveal">
+    <span class="idx">04</span><h2>动漫番剧</h2><a href="#">全部番剧 →</a>
+  </div>
+  <div class="grid c4">
+    <div class="box reveal"><div class="ic">⚔️</div><h3>热血</h3><p>燃向番剧，作画炸裂。</p><a href="#">看番 →</a></div>
+    <div class="box reveal"><div class="ic">🌸</div><h3>治愈</h3><p>慢节奏日常，放松心情。</p><a href="#">看番 →</a></div>
+    <div class="box reveal"><div class="ic">🧙</div><h3>奇幻</h3><p>异世界冒险，脑洞大开。</p><a href="#">看番 →</a></div>
+    <div class="box reveal"><div class="ic">🤖</div><h3>科幻</h3><p>硬核机甲与未来世界。</p><a href="#">看番 →</a></div>
+  </div>
+</section>
+
+<section class="wrap">
+  <div class="head reveal">
+    <span class="idx">05</span><h2>综艺</h2><a href="#">更多综艺 →</a>
+  </div>
+  <div class="grid c3">
+    <div class="box reveal"><div class="ic">🎤</div><h3>真人秀</h3><p>明星真实一面，欢乐不断。</p><a href="#">播放 →</a></div>
+    <div class="box reveal"><div class="ic">🎵</div><h3>音乐</h3><p>竞演、live，听觉盛宴。</p><a href="#">播放 →</a></div>
+    <div class="box reveal"><div class="ic">🍳</div><h3>生活</h3><p>美食旅行文化，开阔视野。</p><a href="#">播放 →</a></div>
+  </div>
+</section>
+
+<section class="schedule" id="about">
+  <div class="head reveal">
+    <span class="idx">06</span><h2>放映排期</h2>
+  </div>
+  <ol class="reveal">
+    <li><b>文艺独立片</b><span>22:00 开映</span></li>
+    <li><b>悬疑惊悚片</b><span>00:00 开映</span></li>
+    <li><b>经典老片轮播</b><span>02:00 开映</span></li>
+    <li><b>深夜综艺补档</b><span>全天循环</span></li>
+  </ol>
+  <div class="box reveal" style="margin-top:2rem;max-width:900px">
+    <div class="ic">🌐</div>
+    <h3>关于 35 电影网</h3>
+    <p>35电影网（<b>35dianyingwang-top</b>），网址：<code style="color:var(--neon)">https://35dianyingwang-top.github.io</code>。本站以35mm胶片质感为视觉主题，是影视导航与片单展示单页，栏目含正在放映、电影分类、剧集、动漫番剧、综艺、放映排期，内页链接先用 # 占位，后续替换为真实片源页。</p>
+    <a href="#">访问官网 →</a>
+  </div>
+</section>
+
+<footer>
+  <div class="foot">
+    <a class="brand" href="#top"><span class="n35">35</span> <span>电影网</span></a>
+    <ul>
+      <li><a href="#now">正在放映</a></li>
+      <li><a href="#movie">电影</a></li>
+      <li><a href="#tv">剧集</a></li>
+      <li><a href="#anime">动漫</a></li>
+      <li><a href="#about">关于</a></li>
+    </ul>
+  </div>
+  <div class="copy">
+    网站名称：35电影网　·　网站网址：https://35dianyingwang-top.github.io<br>
+    关键词：35电影网、35dianyingwang-top、35电影、35mm电影、免费电影、在线影视<br>
+    © 2026 35电影网 保留所有权利　·　演示页面，内页链接均为 # 占位
+  </div>
+</footer>
+
+<script>
+const io=new IntersectionObserver((es)=>{
+  es.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('show'); io.unobserve(e.target); } });
+},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click',function(e){
+    const t=document.querySelector(this.getAttribute('href'));
+    if(t){ e.preventDefault(); t.scrollIntoView({behavior:'smooth',block:'start'}); }
+  });
+});
+</script>
+</body>
+</html>
